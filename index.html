@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro do Cliente</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('background.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        label {
+            font-weight: 600;
+            display: block;
+            text-align: left;
+            margin-top: 10px;
+            color: #555;
+            font-size: 14px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .radio-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 8px;
+        }
+
+        .radio-group label {
+            background: #e9ecef;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #007BFF, #0056b3);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #0056b3, #003580);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Cadastro do Cliente</h2>
+
+        <form action="https://formsubmit.co/leonardoalbuquerque353@gmail.com" method="POST">
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" required>
+
+            <label for="cidade">Cidade/Estado:</label>
+            <input type="text" id="cidade" name="cidade_estado" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="peso">Peso (kg):</label>
+            <input type="number" id="peso" name="peso" required>
+
+            <label for="altura">Altura (cm):</label>
+            <input type="number" id="altura" name="altura" required>
+
+            <label>É tabagista?</label>
+            <div class="radio-group">
+                <input type="radio" id="tabagista-sim" name="tabagista" value="Sim" required>
+                <label for="tabagista-sim">Sim</label>
+                <input type="radio" id="tabagista-nao" name="tabagista" value="Não">
+                <label for="tabagista-nao">Não</label>
+            </div>
+
+            <label>Já esteve grávida?</label>
+            <div class="radio-group">
+                <input type="radio" id="gravida-sim" name="gravida" value="Sim" required>
+                <label for="gravida-sim">Sim</label>
+                <input type="radio" id="gravida-nao" name="gravida" value="Não">
+                <label for="gravida-nao">Não</label>
+            </div>
+
+            <label for="filhos">Quantos filhos tem?</label>
+            <input type="number" id="filhos" name="filhos" min="0">
+
+            <label>Já amamentou?</label>
+            <div class="radio-group">
+                <input type="radio" id="amamentou-sim" name="amamentou" value="Sim" required>
+                <label for="amamentou-sim">Sim</label>
+                <input type="radio" id="amamentou-nao" name="amamentou" value="Não">
+                <label for="amamentou-nao">Não</label>
+            </div>
+
+            <label>Tem plano de saúde?</label>
+            <div class="radio-group">
+                <input type="radio" id="plano-sim" name="plano_saude" value="Sim" required>
+                <label for="plano-sim">Sim</label>
+                <input type="radio" id="plano-nao" name="plano_saude" value="Não">
+                <label for="plano-nao">Não</label>
+            </div>
+
+            <label>Nos conheceu por onde?</label>
+            <select name="conheceu" required>
+                <option value="Indicação">Indicação</option>
+                <option value="Instagram">Instagram</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Google">Google</option>
+                <option value="Site">Site</option>
+            </select>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+</body>
+</html>
